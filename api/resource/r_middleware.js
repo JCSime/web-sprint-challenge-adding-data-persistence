@@ -7,7 +7,9 @@ const validateId = (req, res, next) => {
         req.resource = req.body;
         next();
       } else {
-        res.status(404).json({ message: 'That ID could not be found' });
+        res.status(404).json({ 
+          message: 'That ID could not be found' 
+        });
       }
     })
     .catch(next);
@@ -20,7 +22,9 @@ const validateBody = (req, res, next) => {
     typeof resource_name !== 'string' ||
     resource_name === ''
   ) {
-    res.status(400).json({ message: 'Name is required for resource' });
+    res.status(400).json({ 
+      message: 'Name is required for resource' 
+    });
   } else {
     next();
   }

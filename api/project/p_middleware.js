@@ -5,7 +5,9 @@ const validateBody = (req, res, next) => {
       typeof project_name !== 'string' ||
       project_name === ''
     ) {
-      res.status(400).json({ message: 'project_name required' });
+      res.status(400).json({ 
+        message: 'project_name required' 
+      });
     }
     if (!project_completed || project_completed === undefined) {
       req.body.project_completed = false;

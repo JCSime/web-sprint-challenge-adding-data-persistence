@@ -24,4 +24,8 @@ async function getById(project_id) {
   return await project;
 }
 
-module.exports = { findAll, postProject, getById };
+module.exports = { 
+  findAll, 
+  postProject, 
+  getById 
+};
